@@ -9,15 +9,9 @@ public class PlayerController : MonoBehaviour
     private float turnSpeed = 10;
     private float horizontalInput;
     private float VerticalInput;
-   
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
-    {
+    void FixUpdate(){
 
         horizontalInput = Input.GetAxis("Horizontal");
         VerticalInput = Input.GetAxis("Vertical");

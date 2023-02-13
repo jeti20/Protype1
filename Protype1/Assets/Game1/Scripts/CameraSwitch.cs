@@ -10,32 +10,26 @@ public class CamerSwitch : MonoBehaviour
     public Vector3 offset2 = new Vector3(0, 2, 1);
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         offset = offset1;
     }
 
     // LateUpdate funkcja jest wywo³ywana
-    void LateUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
+    void LateUpdate(){
+        if (Input.GetKeyDown(KeyCode.P)){
             cam2();
         }
-        else
-        {
+        else{
             cam1();
         }
 
-        void cam1()
-        {
+        void cam1(){
             transform.position = player.transform.position + offset1;
             transform.rotation = player.transform.rotation;
         }
 
 
-        void cam2()
-        {
+        void cam2(){
             transform.position = player.transform.position + offset2;
             transform.rotation = player.transform.rotation;
         }
